@@ -1,0 +1,33 @@
+nav {
+    display: flex;
+    width: 80vw;
+    justify-content: flex-end;
+    padding: 1rem;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+  }
+  
+  a {
+    color: #000;
+    text-decoration: none;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  a:active {
+    color: rgb(136, 136, 136);
+  }
+  
+  .options {
+    font-size: large;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2px;
+    margin: 16px 19px;
+  }
+  
+  
