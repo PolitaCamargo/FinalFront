@@ -52,12 +52,7 @@ const HomeCard = ({ dentist, addFav, favs, theme }) => {
         </CardContent>
 
         <CardActions>
-          <Button
-              onClick={() => addFav(dentist)}
-              size="small"
-              disabled={favs.some((fav) => fav.id === id) ? true : false}
-            
-          >
+          <Button onClick={() => addFav(dentist)} size="small">
             <FavoriteIcon />
           </Button>
         </CardActions>

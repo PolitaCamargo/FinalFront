@@ -20,7 +20,9 @@ export const initialState = {
   theme: getThemeFromStorage(),
   users: [],
   favs: getDentistFavFromStorage(),
+  theme: "light",
 };
+
 
 export const ContextGlobal = createContext();
 
@@ -29,17 +31,12 @@ function globalReducer(state, action) {
     case "GET_USERS":
       return { ...state, users: action.payload };
 
-    case "MOD_LIGHT":
-      localStorage.setItem("theme", "light");
-      return { ...state, theme: "light" };
+      case "GET_THEME":
+        const newTheme = state.theme === "light" ? "dark" : "light";
+        return { ...state, theme: newTheme };
 
-    case "MOD_DARK":
-      localStorage.setItem("theme", "dark");
-      return { ...state, theme: "dark" };
-    case "ADD_FAV":
-      let exist = state.favs.some(
-        (element) => element.id === action.payload.id
-      );
+  
+      
     default:
       return state;
   }

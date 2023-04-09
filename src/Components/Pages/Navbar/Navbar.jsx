@@ -6,42 +6,34 @@ import { ContextGlobal } from "../../../Contexts/GlobalContext";
 import "./Navbar.css";
 
 const Navbar = () => {
-    const { state, dispatch } = useContext(ContextGlobal);
-  
-    function ChageTheme() {
+  const { state, dispatch } = useContext(ContextGlobal);
 
-      if (state.theme === "light") {
-        dispatch({ type: "MOD_DARK" });
-      } else if (state.theme === "dark") {
-        dispatch({ type: "MOD_LIGHT" });
-      }
-    }
-  
-    useEffect(() => {}, [state.theme]);
-  
-    return (
-      <nav id="navbar" >
-          
-        <ul className="options">
-          <li>
-            <Link to="/home">Home</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li>
-            <Link to="/favs">Favs</Link>
-          </li>
-          <li>
-
-            <Button variant="outlined" onClick={ChageTheme}>
-               🌙
-            </Button>
-          </li>
-        </ul>
-      </nav>
-    );
+  const changeTheme = () => {
+    dispatch({ type: "GET_THEME" });
   };
-  
-  export default Navbar;
-  
+
+
+
+  return (
+    <nav className={state.theme === "dark" ? "dark" : "light"}>
+      <span className="navLogo">
+        <Link to="/home">DH Odonto </Link>
+      </span>
+
+      <div>
+        <span>
+          <Link to="/home">Home</Link>
+        </span>
+        <span>
+          <Link to="/contact">Contact</Link>
+        </span>
+        <span>
+          <Link to="/favs">Favs</Link>
+        </span>
+        <button className="chaNav" onClick={changeTheme}> {state.theme === "dark" ? "☀️" : "🌙"}</button>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

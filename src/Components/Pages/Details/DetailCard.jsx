@@ -26,8 +26,6 @@ const DetailCard = ({ dentistSelect, addFav, favs }) => {
 
       <Button
         onClick={() => addFav(dentistSelect)}
-        size="small"
-        variant="contained"
         disabled={
           favs.some((fav) => fav.id === dentistSelect.id) ? true : false
         }

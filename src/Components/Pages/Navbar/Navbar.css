@@ -1,13 +1,19 @@
 nav {
-    display: flex;
-    width: 80vw;
-    justify-content: flex-end;
-    padding: 1rem;
-    flex-direction: row;
-    align-items: center;
-    margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  background-color: rgba(248, 248, 248, 0.849);
+  height: 5rem;
+  padding: 0.5rem 2rem;
+  margin-bottom: 3rem;
   }
   
+  nav span::first-letter {
+    color: #f21d1d;
+  } 
+
   a {
     color: #000;
     text-decoration: none;
@@ -31,3 +37,84 @@ nav {
   }
   
   
+.navLogo a {
+  font-size: 32px;
+  color: rgba(8, 8, 8, 0.9);
+}
+
+nav div {
+  padding-right: 1rem;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  background-color: rgba(248, 248, 248, 0.849);
+  height: 5rem;
+  padding: 0.5rem 2rem;
+  margin-bottom: 3rem;
+}
+
+.navLogo a {
+  font-size: 32px;
+  color: rgba(8, 8, 8, 0.9);
+}
+
+nav div {
+  padding-right: 1rem;
+}
+
+nav div a {
+  color: rgba(94, 94, 94, 0.55);
+  font-size: 18px;
+  font-weight: 700;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+  margin: 0.3rem;
+}
+
+nav div a:hover {
+  color: rgb(54, 54, 54);
+}
+
+nav span::first-letter {
+  color: #f21d1d;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 9px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  height: 3rem;
+  padding: 1rem;
+  margin: 0.3rem;
+}
+
+.chaNav {
+  width: 4rem;
+  height: 3rem;
+  border-radius: 20%;
+}
+
+.chaNav:hover{
+  cursor: pointer;
+  background-color: rgba(116, 116, 116, 0.849);
+}
+
+.dark {
+  background-color: rgb(59, 59, 59);
+  color: #fff;
+}

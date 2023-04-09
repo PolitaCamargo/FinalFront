@@ -5,7 +5,7 @@ import FavCard from "./FavCard";
 import "../Favs/Favs.css";
 
 const Favs = () => {
-  const { state, dispatch } = useContext(ContextGlobal);
+  const { state } = useContext(ContextGlobal);
 
   const favsDentists = state.favs;
 
